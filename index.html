@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q:1 -->
+    <!-- <button id="myButton">Click me</button>
+        document.getElementById("myButton").addEventListener("click", function() {
+            console.log("Button clicked!");
+        }) -->
+<!-- Q:2 -->
+<!-- <button id="hideButton">Hide Element</button>
+    <div id="elementToHide">This is the element to hide.</div>
+
+        document.getElementById("hideButton").addEventListener("click", function() {
+            document.getElementById("elementToHide").style.display = "none";
+        }); -->
+        <!-- Q:3 -->
+    <!-- <style>
+        a:hover {
+            color: rgb(141, 78, 78);
+        }
+    </style>
+    <a href="#">Hover</a> -->
+    
+<!-- Q:4 -->
+
+<!-- <a href="#" id="scrollToTopLink">Scroll to Top</a> -->
+
+<!-- Q:5 -->
+
+<!-- <a href="sound/mixkit-fast-rocket-whoosh-1714.wav" id="playSoundLink">Play Sound</a>
+    <audio id="myAudio">
+        <source src="sound/mixkit-fast-rocket-whoosh-1714.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+     -->
+
+<!-- Q:6 -->
+
+<!-- <a href="https://getbootstrap.com/" id="openNewWindowLink" target="_blank">Open New Window</a> -->
+
+<!-- Q:7 -->
+
+<!-- <button id="alertButton">Click me</button>
+
+    <script>
+        document.getElementById("alertButton").addEventListener("click", function() {
+            alert("Hello User!");
+        });
+    </script> -->
+
+    <!-- Q:8 -->
+
+    <!-- <style>
+        #hoverButton:hover {
+            background-color: rgb(22, 159, 204);
+        }
+    </style>
+        <button id="hoverButton">Hover over me</button> -->
+
+        <!-- Q:9 -->
+
+        <!-- <a href="sound/mixkit-fast-rocket-whoosh-1714.wav" id="playSoundLink">Play Sound</a>
+        <audio id="myAudio">
+            <source src="sound/mixkit-fast-rocket-whoosh-1714.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+         -->
+
+        <!-- Q:10 -->
+
+        <!-- <div id="myDiv">Move the mouse over me</div>
+
+        <script>
+            document.getElementById("myDiv").addEventListener("mouseover", function() {
+                alert("Mouse over!");
+            });
+        </script> -->
+
+<!-- Q:11 -->
+
+<!-- <div id="myDiv">Move the mouse over me</div>
+
+    <script>
+        document.getElementById("myDiv").addEventListener("mouseout", function() {
+            this.style.display = "none";
+        });
+    </script> -->
+
+<!-- Q:12 -->
+
+    <!-- <script>
+        let openedWindow;
+
+        function openResizableWindow() {
+            
+            const windowWidth = window.innerWidth / 2;
+            const windowHeight = window.innerHeight / 2;
+
+            
+            openedWindow = window.open('', '_blank', `width=${windowWidth},height=${windowHeight}`);
+
+            
+            openedWindow.document.write(`
+                
+                    <h1>New Window Content</h1>
+                    <button id="closeButton">Close Window</button>
+
+                    <script>
+                        document.getElementById("closeButton").addEventListener("click", function() {
+                            window.close();
+                        });
+                    </script>
+                </body>
+                </html>
+            `);
+        }
+        <a href="#" onclick="openResizableWindow();">Open Resizable Window</a>
+    </script> -->
+
+    <!-- chapter:49 to 50 -->
+
+    <!-- Q:1 -->
+
+    <!-- <input type="text" id="myInput" placeholder="Enter text">
+    <button onclick="getValue()">Get Value</button>
+
+    <script>
+        function getValue() {
+            const inputValue = document.getElementById("myInput").value;
+            console.log("Input Value:", inputValue);
+        }
+    </script> -->
+    
+<!-- Q:2 -->
+
+<!-- <input type="checkbox" id="myCheckbox" onclick="getCheckboxValue()">
+    
+<script>
+    function getCheckboxValue() {
+        const isChecked = document.getElementById("myCheckbox").checked;
+        console.log("Checkbox Value:", isChecked);
+    }
+</script> -->
+
+<!-- Q:3 -->
+
+<!-- <select id="mySelect" onchange="getSelectValue()">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+</select>
+
+<script>
+    function getSelectValue() {
+        const selectedValue = document.getElementById("mySelect").value;
+        console.log("Select Box Value:", selectedValue);
+    }
+</script> -->
+
+<!-- Q:4 -->
+
+<!-- <p id="myField">This is some text in a field.</p> -->
+
+<!-- Q:5 -->
+
+<!-- <p id="status"></p>
+    
+    <script>
+        const single = false;
+        if (!single) {
+            document.getElementById("status").textContent = "available";
+        }
+    </script> -->
+
+    <!-- Q:6 -->
+
+    <!-- <input type="text" id="myInput" placeholder="Enter text">
+    <button onclick="fillEmptyInput()">Fill Input</button>
+
+    <script>
+        function fillEmptyInput() {
+            const inputElement = document.getElementById("myInput");
+            if (inputElement.value === "") {
+                inputElement.value = "Default Text";
+            }
+        }
+    </script> -->
+
+    <!-- Q:7 -->
+
+    <!-- <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+    <p id="errorMessage" class="error"></p>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (!username || !email || !password) {
+                errorMessage.textContent = "All fields are required.";
+                return false;
+            }
+        }
+            </script> -->
+</body>
+</html>
